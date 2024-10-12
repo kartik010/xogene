@@ -1,38 +1,116 @@
-.App {
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9; /* Light background for a clean look */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+.header {
   text-align: center;
+  margin-bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  font-size: 48px; /* Larger font size for prominence */
+  font-weight: bold;
+  color: #0057b7; /* Brand color */
+  margin: 10px 0; /* Margins for spacing */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Search Container Styles */
+.search-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  background-color: white; /* White background for input section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.App-link {
-  color: #61dafb;
+/* Input Styles */
+input {
+  padding: 12px; /* More padding for comfort */
+  width: 320px; /* Slightly wider input */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded edges */
+  font-size: 16px; /* Larger font for better readability */
+  transition: border-color 0.3s; /* Smooth transition on focus */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input:focus {
+  border-color: #0057b7; /* Highlight border on focus */
+}
+
+/* Button Styles */
+button {
+  margin-left: 1vw;
+  padding: 10px 20px;
+  background-color: #0057b7; /* Consistent brand color */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+button:hover {
+  background-color: #004494; /* Darker shade on hover */
+}
+
+/* List Styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+ul li {
+  cursor: pointer;
+  padding: 10px; /* More padding for touch targets */
+  border-bottom: 1px solid #e0e0e0; /* Light border between items */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+ul li:hover {
+  background-color: #f0f0f0; /* Slightly darker on hover */
+}
+
+/* Error Message Styles */
+.error {
+  color: red;
+  font-weight: bold; /* Make error messages stand out */
+  margin-top: 10px; /* Space above error message */
+}
+
+/* Drug Info Container Styles */
+.drug-info-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px; /* Space above the container */
+  background-color: white; /* Consistent with search container */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  input {
+    width: 100%; /* Full width on small screens */
+    box-sizing: border-box; /* Ensure padding and border are included */
   }
-  to {
-    transform: rotate(360deg);
+
+  .search-container {
+    padding: 15px; /* Adjust padding on smaller screens */
+  }
+
+  .logo {
+    font-size: 36px; /* Slightly smaller logo */
+  }
+  button{
+    margin-top: 1vh;
+    width: 50%;
   }
 }
